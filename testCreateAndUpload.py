@@ -22,8 +22,8 @@ DSN = json.loads(open('config.json', "r").read())
 #############################################
 
 ######### configure test ############
-TRIALNUM = 1
-SIZEARRAY = [4, 5, 6, 7, 8, 9, 10]
+TRIAL_NUM = 1
+SIZEARRAY = [4,5,6,7,8,9,10]
 ######### configure test ############
 
 ######### ask host to provide ip and cert if self signed############
@@ -32,7 +32,7 @@ VERIFY_TLS_LOCAL = False
 VERIFY_TLS_GLOBAL = False
 #######################################################
 
-FOLDER_PATH = TODAY + "-trial-" + str(TRIALNUM)
+FOLDER_PATH = TODAY + "-trial-" + str(TRIAL_NUM)
 
 LOG_FILE_SERVER = FOLDER_PATH + "/server.log"
 LOG_FILE_E2ETIME = FOLDER_PATH + "/e2etime.log"

@@ -1,4 +1,3 @@
-
 import numpy as np
 import matplotlib.pyplot as plt
 import re
@@ -8,7 +7,7 @@ x = np.array([pow(2, 4),	pow(2, 5),	pow(2, 6),	pow(
 
 
 ################ Modify PATH to plot ################
-FOLDER_PATH = "./19-04-2022-trial-1"
+FOLDER_PATH = "./20-04-2022-trial-2"
 #####################################################
 
 
@@ -60,6 +59,8 @@ plt.close()
 plt.ylabel("std time per certificate (second)")
 plt.xlabel("number of certificate")
 plt.xscale('log', base=2)
+plt.ylim(0, 0.1)
+
 plt.plot(x, e2e_time_std, '-o')
 plt.grid()
 plt.savefig(FOLDER_PATH + "/issuing-time-std-diagram.png")
@@ -99,7 +100,7 @@ plt.ylabel("average verification time per certificate (second)")
 plt.xlabel("number of certificate")
 plt.plot(x, verify_time, '-o')
 plt.xscale('log', base=2)
-plt.ylim((0, 0.05))
+plt.ylim((0, 0.08))
 plt.grid()
 plt.savefig(FOLDER_PATH + "/verify-time-diagram.png")
 plt.close()
@@ -110,7 +111,7 @@ plt.ylabel("std time per certificate (second)")
 plt.xlabel("number of certificate")
 plt.plot(x, verify_time_std, '-o')
 plt.xscale('log', base=2)
-plt.ylim((0, 0.01))
+plt.ylim((0, 0.015))
 
 plt.grid()
 plt.savefig(FOLDER_PATH + "/verify-time-std-diagram.png")
